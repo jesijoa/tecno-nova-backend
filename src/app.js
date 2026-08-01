@@ -3,6 +3,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const clienteRoutes = require('./modules/cliente');
+const productoRoutes = require('./modules/producto');
 const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/clientes', clienteRoutes);
+app.use('/api/productos', productoRoutes);
 
 app.use(errorHandler);
 

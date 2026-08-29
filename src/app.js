@@ -4,6 +4,7 @@ require('dotenv').config();
 
 const clienteRoutes = require('./modules/cliente');
 const productoRoutes = require('./modules/producto');
+const authRoutes = require('./modules/auth');
 const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
@@ -17,6 +18,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/clientes', clienteRoutes);
 app.use('/api/productos', productoRoutes);
+app.use('/api/auth', authRoutes);
 
 app.use(errorHandler);
 

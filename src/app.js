@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const categoriaRoutes = require('./modules/categoria');
 require('dotenv').config();
 
 const clienteRoutes = require('./modules/cliente');
@@ -19,6 +20,7 @@ app.get('/', (req, res) => {
 app.use('/api/clientes', clienteRoutes);
 app.use('/api/productos', productoRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/categorias', categoriaRoutes);
 
 app.use(errorHandler);
 

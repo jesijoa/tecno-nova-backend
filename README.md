@@ -28,6 +28,29 @@ Arquitectura por capas: config, middleware, modules (cada módulo con controller
 | PATCH | /api/clientes/:id/status | Activar/inactivar |
 | DELETE | /api/clientes/:id | Eliminación lógica |
 
+
+
+
+
+## Endpoints — Módulo Categoría
+| Método | Ruta | Descripción |
+|---|---|---|
+| GET | /api/categorias | Listar categorías activas |
+| GET | /api/categorias/:id | Consultar una categoría |
+| POST | /api/categorias | Crear categoría |
+| PUT | /api/categorias/:id | Actualizar datos generales |
+| PATCH | /api/categorias/:id/status | Activar/inactivar |
+| DELETE | /api/categorias/:id | Eliminación lógica |
+
+## Endpoints — Módulo Pedido
+| Método | Ruta | Descripción |
+|---|---|---|
+| POST | /api/pedidos | Crear pedido (valida stock, calcula total y descuenta inventario) |
+| GET | /api/pedidos | Listar todos los pedidos |
+| GET | /api/pedidos/:id | Consultar un pedido con su detalle |
+| GET | /api/pedidos/cliente/:id_cliente | Listar pedidos de un cliente |
+| PATCH | /api/pedidos/:id/status | Actualizar estado del pedido |
+
 ## Autores
 Jessica Joana Recalde Portilla y Jair Llantén Martínez — SENA ADSO, ficha 3235887
 
@@ -63,4 +86,4 @@ Arquitectura por capas: config, middleware, modules (cada módulo con controller
 | DELETE | /api/clientes/:id | Eliminación lógica |
 
 ## Autores
-Jessica Joana Recalde Portilla y Jair Llantén Martínez — SENA ADSO, ficha 3235887 ```
+Jessica Joana Recalde Portilla y Jair Llantén Martínez — SENA ADSO, ficha 3235887 

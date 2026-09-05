@@ -7,6 +7,7 @@ const carritoRoutes = require('./modules/carrito');
 const pagoRoutes = require('./modules/pago');
 const facturaRoutes = require('./modules/factura');
 const comentarioRoutes = require('./modules/comentario');
+const administradorRoutes = require('./modules/administrador');
 
 
 const clienteRoutes = require('./modules/cliente');
@@ -32,6 +33,7 @@ app.use('/api/carrito', carritoRoutes);
 app.use('/api/pagos', pagoRoutes);
 app.use('/api/facturas', facturaRoutes);
 app.use('/api/comentarios', comentarioRoutes);
+app.use('/api/administradores', administradorRoutes);
 
 
 app.use(errorHandler);

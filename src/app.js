@@ -5,6 +5,7 @@ require('dotenv').config();
 const pedidoRoutes = require('./modules/pedido');
 const carritoRoutes = require('./modules/carrito');
 const pagoRoutes = require('./modules/pago');
+const facturaRoutes = require('./modules/factura');
 
 
 const clienteRoutes = require('./modules/cliente');
@@ -28,6 +29,7 @@ app.use('/api/categorias', categoriaRoutes);
 app.use('/api/pedidos', pedidoRoutes);
 app.use('/api/carrito', carritoRoutes);
 app.use('/api/pagos', pagoRoutes);
+app.use('/api/facturas', facturaRoutes);
 
 app.use(errorHandler);
 

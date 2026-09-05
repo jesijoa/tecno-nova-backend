@@ -45,5 +45,13 @@ async function clear(req, res, next) {
     next(err);
   }
 }
-
+async function confirmarCompra(req, res, next) {
+  try {
+    const pedido = await carritoService.confirmarCompra(req.cliente.id_cliente);
+    res.status(201).json({ message: 'Compra confirmada, pedido creado', data: pedido });
+  } catch (err) {
+    next(err);
+  }
+}
 module.exports = { getCarrito, addItem, updateItem, removeItem, clear };
+module.exports = { getCarrito, addItem, updateItem, removeItem, clear, confirmarCompra };

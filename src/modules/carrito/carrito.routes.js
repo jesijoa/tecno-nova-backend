@@ -11,3 +11,4 @@ router.delete('/items/:id', verifyToken, controller.removeItem);
 router.delete('/', verifyToken, controller.clear);
 
 module.exports = router;
+router.post('/confirmar-compra', verifyToken, controller.confirmarCompra);

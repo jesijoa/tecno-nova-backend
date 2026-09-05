@@ -3,6 +3,7 @@ const cors = require('cors');
 const categoriaRoutes = require('./modules/categoria');
 require('dotenv').config();
 const pedidoRoutes = require('./modules/pedido');
+const carritoRoutes = require('./modules/carrito');
 
 const clienteRoutes = require('./modules/cliente');
 const productoRoutes = require('./modules/producto');
@@ -23,6 +24,7 @@ app.use('/api/productos', productoRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/categorias', categoriaRoutes);
 app.use('/api/pedidos', pedidoRoutes);
+app.use('/api/carrito', carritoRoutes);
 
 app.use(errorHandler);
 

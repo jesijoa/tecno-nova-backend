@@ -4,7 +4,11 @@ const pool = require('../../config/db');
 class ProductoRepository {
   async findAll() {
     const [rows] = await pool.query(
-      'SELECT id_producto, id_administrador, nombre_producto, descripcion, precio, stock, estado FROM Producto WHERE deleted_at IS NULL'
+      `SELECT p.id_producto, p.nombre_producto, p.descripcion, p.precio, p.stock, p.estado,
+              p.id_categoria, c.nombre_categoria
+       FROM Producto p
+       LEFT JOIN Categoria c ON c.id_categoria = p.id_categoria
+       WHERE p.deleted_at IS NULL`
     );
     return rows;
   }
